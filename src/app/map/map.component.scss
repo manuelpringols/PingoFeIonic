@@ -1,0 +1,91 @@
+.map {
+   position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  opacity: 1;
+  transition: opacity 150ms ease-in;
+  z-index: 99;
+}
+
+.div-map {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    
+
+    border-bottom-style: none;
+    box-sizing: border-box;
+   
+}
+
+.div-bar{
+  min-height: 47.4em;
+}
+
+.ion-padding{
+
+}
+
+google-map{
+  width: 100px;
+}
+
+ion-tab-bar{
+  align-self: self-center;
+  width: 99vw;
+  height: 100px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius:55px ;
+  border-bottom-right-radius:55px ;
+  background-color:rgba(46, 33, 162, 0.855);
+  border: 2px yellow solid;
+  z-index: 0;
+  box-shadow: 2px 2px 7px 11px rgba(0, 0, 0, 0.599);
+  --ripple-color:fit-content
+}
+
+ion-tab-button{
+  color: rgba(217, 255, 0, 0.921);
+  background-color: rgba(38, 28, 125, 0.937);
+  z-index: 0;
+}
+
+.div-x{
+  position: absolute;
+  height: 100%;
+  z-index: 99;
+}
+
+.div-tabs {
+  position: absolute;
+  z-index: 100;
+  height: 100px;
+  bottom: 0px;
+  z-index: 100;
+
+  
+}
+
+ion-content {
+ --background:  url("/assets/image.png");
+ --background-size:cover;
+ --background-position:center
+ 
+ 
+ border: 1.5px solid black;
+ 
+}
+
+ion-toolbar{
+  --background:rgba(38, 28, 125, 0.937) ;
+  border: 1px solid black;
+  color: yellowgreen;
+  font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+  
+  

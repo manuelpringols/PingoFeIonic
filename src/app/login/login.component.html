@@ -1,0 +1,94 @@
+<div class="div-login">
+  <div class="div-bottoni">
+
+    <div *ngIf="mostraFormLogin"  class="div-form-login">
+      <span class="span-img"><img (click)="setLogin()" src="/assets/icons8-cancel-100.png"></span>
+      <p>Inserisci Dati Utente</p>
+      
+      
+      
+      <form #loginform="ngForm" (submit)="onSubmit()">
+
+        <ion-input style="color: rgb(207, 248, 27);"  ngModel required email name="email"   label="Inserire Email" placeholder="qwerty@gmail.com"></ion-input>
+  
+        <ion-input style="color: rgb(207, 248, 27);" ngModel required password name="password"    type="{{ showPassword ? 'text' : 'password' }}" label="Inserire Password" placeholder="*****">
+          
+        </ion-input>
+
+        <button [disabled]="loginform.invalid" ion-button (click)="openMap()" class="form-button"  >
+          <span  class="shine"></span>
+          Accedi
+    
+        </button>
+    
+      </form>
+      <div class="div-crea-account">
+        <p style="  color: rgb(236, 234, 234);">Don't have an account? </p> 
+        <p style="color: rgb(207, 248, 27); text-decoration:underline; ">Create an account</p>
+      </div>
+      
+    </div>
+
+
+
+  <!-- ----------------------DIV LOGIN-------------------- -->
+
+
+
+    <div *ngIf="mostraFormRegister"  class="div-form-login">
+      <span class="span-img"><img (click)="setRegister()" src="/assets/icons8-cancel-100.png"></span>
+      <p>Registra Dati Utente</p>
+      
+      
+      
+      <form #registerform="ngForm" (submit)="onSubmit()">
+
+        <ion-input style="color: rgb(207, 248, 27);"  ngModel required email name="email"   label="Inserire Email" placeholder="qwerty@gmail.com"></ion-input>
+  
+        <ion-input style="color: rgb(207, 248, 27);" ngModel required password name="password"    type="{{ showPassword ? 'text' : 'password' }}" label="Inserire Password" placeholder="*****"></ion-input>
+
+        <ion-input style="color: rgb(207, 248, 27);" ngModel required  name="username"    type="{{ showPassword ? 'text' : 'password' }}" label="Inserire Username" placeholder="CrazyGriefer"></ion-input>
+
+        <ion-input style="color: rgb(207, 248, 27);" ngModel required  name="nome"    type="{{ showPassword ? 'text' : 'password' }}" label="Inserire Nome" placeholder="Mimmo"></ion-input>
+        
+        <ion-input style="color: rgb(207, 248, 27);" ngModel required  name="cerqua"    type="{{ showPassword ? 'text' : 'password' }}" label="Inserire Cognome" placeholder="Dany"></ion-input>
+          
+
+        <button style="margin-top: 7px;" [disabled]="registerform.invalid" ion-button (click)="openMap()" class="form-button"  >
+          <span  class="shine"></span>
+          Registrati
+    
+        </button>
+    
+      </form>
+      
+      
+    </div>
+
+
+    <!-- ----------------------DIV LOGIN-------------------- -->
+
+    <button ion-button (click)="setLogin()"  class="shiny-button">
+      <span  class="shine"></span>
+      Accedi
+
+    </button>
+
+    <button ion-button (click)="signinGoogle()"  class="shiny-button">
+      <span  class="shine"></span>
+      Accedi Con Google
+
+    </button>
+    <button (click)="setRegister()" class="shiny-button">
+      <span class="shine"></span>
+      Registrati
+    </button>
+
+
+    <!-- ----------------------DIV PULSANTI -------------------- -->
+
+</div>
+  
+
+  
+</div>

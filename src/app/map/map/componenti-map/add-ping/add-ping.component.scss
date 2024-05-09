@@ -1,0 +1,87 @@
+.container {
+    background-color: #4f04b8;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 2px 2px 7px 8px rgba(18, 4, 51, 0.74);
+   
+   
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #aeff00dc;
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+.form-group {
+    margin-bottom: 20px;
+    color: rgba(27, 6, 76, 0.74);
+    font-family: "Oregano", cursive;
+    font-weight: 450;
+    font-style: italic;
+  
+}
+.form-group ion-input {
+    --placeholder-color: #fffffff5;
+    color: #d9ff00;
+    --label:"red"
+    font-size:15px
+}
+.form-group ion-item {
+    margin-top: 10px;
+    position: relative;
+    left:-15px;
+    --placeholder-color: red;
+    
+    border-radius:50px;
+    box-shadow: 1px 1px 15px 4px rgba(10, 10, 10, 0.866);
+    width: 360px;
+}
+
+ion-item{
+    border-width:1.5px; 
+    border-style:solid;
+    border-color: #007bff;
+    --background: #1b1b1be9;
+
+}
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
+}
+
+ion-modal{
+    background-color: red;
+}
+
+::ng-deep ion-input .label-text {
+    color: rgb(0, 0, 0);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  ion-button{
+    --border-style:solid;
+    --border-color:black;
+    --border-width: 1px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+
+  }
+  
+.button-active{
+   --background:red;
+  }

@@ -1,0 +1,60 @@
+<div class="div-map">
+  <div class="map" #map ></div>
+  <div class="div-x">
+    <!-- <google-map
+      width="100%"
+      height="110%"
+      [center]="center"
+      [zoom]="zoom"
+      (mapClick)="moveMap($event)"
+      (mapMousemove)="move($event)"
+    >
+    </google-map>
+  </div> -->
+
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Aggiungi Ping</ion-title>
+          <ion-buttons slot="end" >
+            <ion-button (click)="setOpen(false)">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+       <app-add-ping [idPing]="idPing"></app-add-ping>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <div class="div-tabs">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home">
+          <ion-icon class="ion-activable" name="play-circle"></ion-icon>
+          <ion-ripple-effect></ion-ripple-effect>
+          Mostra Ping
+        </ion-tab-button>
+        <ion-tab-button tab="radio">
+          <ion-icon name="radio"></ion-icon>
+          Radio
+        </ion-tab-button>
+        <ion-tab-button style="height: 110px; position: abstract" >
+          <ion-icon (click)="setOpen(true)"
+            style="font-size: 110px; position: abstract"
+            name="add"
+          ></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="library">
+          <ion-icon name="library"></ion-icon>
+          Profilo
+        </ion-tab-button>
+        <ion-tab-button tab="search">
+          <ion-icon name="search"></ion-icon>
+          Search
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="container">
+  <h2>Inserisci Dettagli Ping</h2>
+  <form #addPingForm="ngForm" >
+     
+       
+      <div class="form-group">
+        <ion-input   ngModel required  name="descrizione"   label="Inserire Descrizione" placeholder="Qui c'è mario"></ion-input>
+
+      </div>
+      <div class="form-group">
+
+        <ion-item [style.--background]="buttonColor"   button detail lines="full"  >
+          <ion-label>Inserire Foto</ion-label>
+          <ion-button  (click)="takePictures()">scatta foto</ion-button>
+        </ion-item>
+        <img *ngIf="picture" style="border-radius: 50%; margin-top: 15px; border: 1px solid black;" width="60px" height="60px" [src]="picture" alt="Foto">
+
+
+      </div>
+      
+      <div class="form-group">
+       
+        <ion-item [style.--background]="selectBackgroundColor">
+          <ion-select (ionDismiss)="handleDismiss()" [(ngModel)]="selectedType" name="selectedType"    label="Inserire Tipo" label-placement="fixed" placeholder="Ping Type">
+            <ion-select-option value="puttane">puttane</ion-select-option>
+            <ion-select-option value="droga">droga</ion-select-option>
+            <ion-select-option value="sesso">sesso</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </div>
+      <div  class="form-group">
+          <ion-button style="--background: rgb(229, 237, 9);" shape="round" [disabled]="!selectedType || addPingForm.invalid " (click)="mandaPingMongo(addPingForm)" >Salva Ping</ion-button>
+          <ion-button style="--background: rgb(229, 237, 9);" shape="round"  (click)="mettiLike()" >Metti Like</ion-button>
+          <ion-button style="--background: rgb(229, 237, 9);" shape="round"  (click)="mettiDisLike()" >Metti Like</ion-button>
+
+      </div>
+  </form>
+</div>
+

@@ -1,0 +1,92 @@
+{
+  "project_info": {
+    "project_number": "171167079645",
+    "project_id": "pingo-d4d59",
+    "storage_bucket": "pingo-d4d59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171167079645:android:e2d87efbbff916a62b4f34",
+        "android_client_info": {
+          "package_name": "com.dev.pingo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171167079645-p5pvvrsrp3ns3iif2hpkb9crmgvuecbs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dev.pingo",
+            "certificate_hash": "789a9936cc27ca824f95dd4a6bc9a8a7c79e6d0c"
+          }
+        },
+        {
+          "client_id": "171167079645-rc5khvb51e95i4i0cjrp81m7mj8st52v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dev.pingo",
+            "certificate_hash": "a9b443a90a0444c5fb770293e29bb06b96628280"
+          }
+        },
+        {
+          "client_id": "171167079645-8innlseujh20n1uo2t6e41me8lu8qfeh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdS2m3WFzM035RMljjn0mW6N2xcq0_8Ug"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171167079645-8innlseujh20n1uo2t6e41me8lu8qfeh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171167079645:android:6dc272acdb4b29082b4f34",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171167079645-7qprei566vogvki5i8v92l8kodtcrrdi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.ionic.starter",
+            "certificate_hash": "7204e089d0f3c62de1ed95ff40b52cb3c6e2b470"
+          }
+        },
+        {
+          "client_id": "171167079645-8innlseujh20n1uo2t6e41me8lu8qfeh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdS2m3WFzM035RMljjn0mW6N2xcq0_8Ug"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171167079645-8innlseujh20n1uo2t6e41me8lu8qfeh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
