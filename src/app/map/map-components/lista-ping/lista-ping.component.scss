@@ -1,0 +1,34 @@
+.div-lista-ping{
+    width: 100vw;
+}
+
+.ion-padding{
+    height: 30vh;
+    --background: rgba(101, 15, 182, 0.788);
+
+}
+
+.ion-padding-full{
+    height: 100vh;
+    --background: rgba(101, 15, 182, 0.788);
+
+
+  
+}
+
+.span-img{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+ion-list{
+    --border: 1px solid yellowgreen;
+    background-color: #22083b;
+    border-radius: 6px;
+}
+
+ion-label{
+}

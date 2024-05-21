@@ -42,5 +42,9 @@
       "extends": ["plugin:@angular-eslint/template/recommended"],
       "rules": {}
     }
-  ]
+  ],
+  "project": "pin-go-1-0-0/tsconfig.json"
+
+
+  
 }

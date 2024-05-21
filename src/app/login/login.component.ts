@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FirebaseService } from '../service/firebase.service';
 import {GooglePlus } from '@ionic-native/google-plus/ngx';
+import { SibilingService } from '../service/sibiling.service';
 
 
 
@@ -31,7 +32,7 @@ imageUrl = "";
 
   mostraFormRegister:boolean=false;
   mostraFormLogin:boolean=false;
-  constructor(private router:Router, private firebase:FirebaseService,  private googlePlus:GooglePlus
+  constructor(private router:Router, private firebase:FirebaseService,  private googlePlus:GooglePlus,private sibiling:SibilingService
   ) { }
 
 
@@ -39,7 +40,6 @@ imageUrl = "";
 
   ngOnInit() {
 
-    
   }
 
   setLogin() {
@@ -56,36 +56,60 @@ imageUrl = "";
 
     }
 
-    onSubmit() {
-      throw new Error('Method not implemented.');
+    onSubmitRegister(registerForm:any) {
+      this.setRegistra(registerForm.value.email,registerForm.value.password)
+      this.openMap()
       }
+
+      onSubmitLogin(loginForm:any) {
+        this.setRegistra2(loginForm.value.email,loginForm.value.password)
+        this.openMap()
+        }
       
 
       openGoogleAuth(){
         this.firebase.openGoogleAuth()
       }
 
+      openLoginGoogle() {
+        if (localStorage.getItem('registrationCompleted') === 'true') {
+          this.router.navigate(['/map']);
+        } else {
+          this.router.navigate(['/loginGoogle']);
+        }
+      }
 
       signinGoogle() {
-        this.googlePlus.login({}
-        )
-        .then((user) => {
-        console.log('user', user)
-        
-        this.userId = user.userId
-        this.displayName = user.displayName
-        this.email = user.email
-        this.imageUrl = user.imageUrl
-        this.signedIn = true
-        })
-        .catch((err) => {
-        switch (err) {
-        case 12501:
-        // user cancel signin
-        break
-        default:
-        alert(`Error: ${err}`)
-        }
-        })
-        }
-}
+        this.googlePlus.login({})
+          .then((user) => {
+            console.log('user', user);
+    
+            this.userId = user.userId;
+            this.displayName = user.displayName;
+            this.email = user.email;
+            this.sibiling.emailGoogle=user.email
+            this.imageUrl = user.imageUrl;
+            this.signedIn = true;
+            // Naviga verso un altro componente solo se l'autenticazione ha successo
+            this.openLoginGoogle()
+          })
+          .catch((err) => {
+            switch (err) {
+              case 12501:
+                // Utente ha annullato l'autenticazione
+                break;
+              default:
+                alert(`Errore: ${err}`);
+            }
+          });
+      }
+
+      setRegistra(email:any,password:any){
+        this.firebase.signUpEmail(email,password)
+      }
+
+      setRegistra2(email:any,password:any){
+        this.firebase.signInEmail(email,password)
+      }
+
+    }

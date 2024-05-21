@@ -1,0 +1,61 @@
+.div-modal-ping{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+
+}
+
+.nome-utente{
+position: absolute;
+align-self: flex-end;
+
+}
+.div-buttoni{
+align-self: flex-end;
+
+}
+
+.div-buttoni img{
+margin-left: 30px;
+height: 60px;
+}
+
+h1{
+  margin-top: 40px;
+}
+
+ion-card{
+  background-color: rgb(223, 223, 6);
+  border: 2.5px solid rgba(255, 0, 0, 0.71);
+  color: #000000;
+  box-shadow: 2px 2px 7px 6px #151515c2;
+}
+
+ion-card img{
+  width: 100%; /* Imposta la larghezza dell'immagine al 100% dello span */
+  height: 20vh; /* Imposta l'altezza in modo che l'immagine non venga distorta */
+  display: block;
+  filter: blur(5px);
+  
+}
+.limiter{
+  max-width: 800px; /* larghezza massima del limiter */
+  margin: 0 auto; /* centra il limiter orizzontalmente */
+  background-color: rgba(24, 24, 24, 0.87); /* colore di sfondo nero */
+  padding: 2px; /* spazio interno al limiter */
+  color: white;
+}
+.zoom{
+  width: 100%; /* Imposta la larghezza dell'immagine al 100% dello span */
+  height: 20vh; /* Imposta l'altezza in modo che l'immagine non venga distorta */
+  display: block;
+  filter: blur(0px) !important;
+  
+ 
+
+}
+
+
+  
+  /* Imposta l'altezza al 100% dell'altezza della finestra visualizzata */
+

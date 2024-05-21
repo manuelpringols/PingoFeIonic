@@ -7,7 +7,7 @@
       
       
       
-      <form #loginform="ngForm" (submit)="onSubmit()">
+      <form #loginform="ngForm" (submit)="onSubmitLogin(loginform)">
 
         <ion-input style="color: rgb(207, 248, 27);"  ngModel required email name="email"   label="Inserire Email" placeholder="qwerty@gmail.com"></ion-input>
   
@@ -15,7 +15,7 @@
           
         </ion-input>
 
-        <button [disabled]="loginform.invalid" ion-button (click)="openMap()" class="form-button"  >
+        <button [disabled]="loginform.invalid" ion-button (click)="onSubmitLogin(loginform)" class="form-button"  >
           <span  class="shine"></span>
           Accedi
     
@@ -41,7 +41,7 @@
       
       
       
-      <form #registerform="ngForm" (submit)="onSubmit()">
+      <form #registerform="ngForm" (submit)="onSubmitRegister(registerform)">
 
         <ion-input style="color: rgb(207, 248, 27);"  ngModel required email name="email"   label="Inserire Email" placeholder="qwerty@gmail.com"></ion-input>
   
@@ -54,7 +54,7 @@
         <ion-input style="color: rgb(207, 248, 27);" ngModel required  name="cerqua"    type="{{ showPassword ? 'text' : 'password' }}" label="Inserire Cognome" placeholder="Dany"></ion-input>
           
 
-        <button style="margin-top: 7px;" [disabled]="registerform.invalid" ion-button (click)="openMap()" class="form-button"  >
+        <button style="margin-top: 7px;" [disabled]="registerform.invalid" ion-button (click)="onSubmitRegister(registerform)" class="form-button"  >
           <span  class="shine"></span>
           Registrati
     
@@ -83,6 +83,16 @@
       <span class="shine"></span>
       Registrati
     </button>
+
+    <!-- <button (click)="setRegistra()" class="shiny-button">
+      <span class="shine"></span>
+      Registrati2
+    </button>
+
+    <button (click)="setRegistra2()" class="shiny-button">
+      <span class="shine"></span>
+      Registrati3
+    </button> -->
 
 
     <!-- ----------------------DIV PULSANTI -------------------- -->

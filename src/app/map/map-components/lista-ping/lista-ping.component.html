@@ -1,0 +1,30 @@
+
+<div class="div-lista-ping">
+  <ion-content [ngClass]="{'ion-padding-full':mostraListaFull}" class="ion-padding">
+
+    <ion-list lines="inset"  >
+      <ion-list-header>
+        <span class="span-img">
+          <ion-label  style="color: yellowgreen;font-size: 35px;">Lista Ping</ion-label>
+
+
+          <img style="margin-left: auto;margin-right: 5px; " width="30px" (click)="mostraLista()" src="/assets/icons8-schermo-intero-64.png">
+        
+        </span>
+        
+
+       
+      </ion-list-header>
+      <ion-item  lines="none"  style="--background: rgba(47, 167, 10, 0.856); " *ngFor="let ping of listaPingFinty">
+        <ion-label><strong>Descrizione</strong> : {{ping.descrizione}}</ion-label>
+        <ion-label><strong>Data_Creazione</strong> : {{ping.data_creazione}}</ion-label>
+        <ion-label><strong> Immagine</strong> : <img [src]="ping.immagine"></ion-label>
+    
+        
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+
+
+</div>

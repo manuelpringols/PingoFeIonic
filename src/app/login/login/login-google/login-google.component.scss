@@ -1,0 +1,222 @@
+.data-div{
+    display: flex;
+    flex-direction: column;
+}
+
+ion-datetime-button{
+    top: 350px;
+    width: 500px;
+    position: absolute;
+    z-index: 1000;
+    --background-rgb:red;
+
+}
+
+.div-login {
+    position: relative;
+    height: 100%;
+    background-image: url("/assets/login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .div-bottoni {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+  }
+  
+  .shiny-button {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 19px;
+    margin: 10px;
+    position: relative;
+    top: 550px;
+    height: 40px;
+    width: 150px;
+    background-color: #63d31df5;
+    border: 1px solid black;
+    color: rgba(19, 19, 19, 0.882);
+    padding: 10px 20px;
+  
+    
+  
+  
+    border-radius: 22px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.795);
+  }
+  
+  .shine p {
+    text-align: center;
+    vertical-align: auto;
+  }
+  
+  .shiny-button .shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 20%,
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0.5) 80%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shine-animation 2s infinite;
+  }
+  
+  @keyframes shine-animation {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+  }
+  
+  .div-form-login{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    top: 180px;
+    background-color: #241264;
+    width: 350px;
+    height: 100%;
+    z-index: 100;
+    border: 1px solid rgba(0, 132, 255, 0.819);
+    box-shadow: 1px 1px 9px 3px rgb(20, 20, 20);
+  }
+  
+  .span-img{
+    position: absolute;
+  align-self: flex-end;
+  }
+  
+  form button{
+    margin-left: 0;
+    margin-top:25px
+  }
+  
+  .div-form-login img{
+   width: 30px;
+  }
+  
+  form button:disabled{
+  background-color: #46641248;
+  }
+  
+  .div-form-login p{
+    font-size: 24px;
+    font-family: "Ubuntu Sans Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #0c0521;
+  }
+  
+  .div-crea-account p{
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 650;
+    font-style: normal;
+    
+  }
+  
+  
+  .div-input {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    padding: 12px;
+    background-color: rgb(153, 0, 255);
+    position: relative;
+    top: 120px;
+    left: 30px;
+    border-radius: 5px;
+    border: 1.5px solid rgb(194, 206, 25);
+    box-shadow: 1px 1px 7px 7px rgba(0, 0, 0, 0.733);
+  }
+  
+  .div-form-login ion-input {
+    margin: 5px;
+    color: rgb(227, 255, 15) !important;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    --placeholder-color: rgba(115, 255, 0, 0.489) !important;
+    --placeholder-opacity: 0.9;
+  }
+  
+  .div-input ion-icon {
+    position: absolute;
+    right: 50px;
+    top: 80px;
+    z-index: 100;
+  }
+  
+  .div-input ion-button {
+    width: fit-content;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px 2px rgba(39, 39, 39, 0.842);
+  }
+  
+  .form-button{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 19px;
+    margin: 10px;
+    
+    height: 35px;
+    width: 130px;
+    background-color: rgb(207, 248, 27);
+    border: 1px solid black;
+    color: rgba(19, 19, 19, 0.882);
+    padding: 5px 20px;
+    border-radius: 22px;
+  
+    overflow: hidden;
+    box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.795);
+  }
+  
+  
+  
+  .div-input span {
+    margin: 10px;
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .button-logga {
+    border: 1px solid black;
+    --background: yellowgreen;
+  }
+  
+  .button-registra {
+    --background: rgb(255, 123, 0);
+    border: 1px solid black;
+  }
+  
+  ::ng-deep ion-input .label-text {
+    color: rgb(236, 234, 234);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }

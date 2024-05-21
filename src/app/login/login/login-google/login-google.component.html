@@ -1,0 +1,113 @@
+
+    <div class="div-login">
+        <div class="div-bottoni">
+      
+            <div   class="div-form-login">
+                <span class="span-img"><img (click)="setRegister()" src="/assets/icons8-cancel-100.png"></span>
+                <p>Completa Registrazione</p>
+                
+                
+                
+                <form #registerform="ngForm"  (submit)="onSubmitRegister(registerform)">
+          
+                  <ion-input style="color: rgb(207, 248, 27);"  ngModel required email name="email" disabled="true"   label="Inserire Email" [placeholder]="emailGoogle"></ion-input>
+            
+                  <ion-input style="color: rgb(207, 248, 27);" ngModel required password name="password"    type="{{ showPassword ? 'text' : 'password' }}" label="Inserire Password" placeholder="*****"></ion-input>
+          
+                  <ion-input style="color: rgb(207, 248, 27);" ngModel required  name="username"    label="Inserire Username" placeholder="CrazyGriefer"></ion-input>
+          
+                  <ion-input style="color: rgb(207, 248, 27);" ngModel required  name="name"    label="Inserire Nome e Cognome" placeholder="Mimmo Dany"></ion-input>
+                  
+                  <ion-input style="color: rgb(207, 248, 27);" ngModel required  name="number" minlength="9" maxlength="10"
+                  pattern="[0-9]*"   label="Inserire Numero Telefonico" placeholder="342834293"></ion-input>
+                  <!-- <div *ngIf="phoneForm.controls['phoneNumber'].invalid && phoneForm.controls['phoneNumber'].touched">
+                    <p *ngIf="phoneForm.controls['phoneNumber'].errors?.required">Il numero di telefono è obbligatorio.</p>
+                    <p *ngIf="phoneForm.controls['phoneNumber'].errors?.minlength">Il numero di telefono deve essere di 9 cifre.</p>
+                    <p *ngIf="phoneForm.controls['phoneNumber'].errors?.maxlength">Il numero di telefono deve essere di 9 cifre.</p>
+                  </div>  -->
+                  <div class="data-div">
+                    <ion-input style="color: rgb(207, 248, 27);" disabled="true" name="number"    label="Inserire DataNascita"></ion-input>
+
+
+                    <ion-datetime-button  color="red" datetime="datetime"></ion-datetime-button>
+  
+  <ion-modal   [keepContentsMounted]="true">
+    <ng-template>
+      <ion-datetime color="rose"
+        id="datetime"
+        presentation="date"
+        value="2023-11-02T01:22:00"
+        (ionChange)="onDateChange($event)"
+        [formatOptions]="{
+          date: {
+            weekday: 'short',
+            month: 'long',
+            day: '2-digit',
+          },
+         
+        }"
+      ></ion-datetime>
+    </ng-template>
+  </ion-modal>
+
+
+                  </div>
+                 
+          
+                  <button style="margin-top: 7px;" [disabled]="registerform.invalid" ion-button (click)="onSubmitRegister(registerform)" class="form-button"  >
+                    <span  class="shine"></span>
+                    Accedi
+              
+                  </button>
+
+                  <button  style="margin-top: 7px; width: 300px;"  ion-button (click)="openMap()" class="form-button"  >
+                    <span  class="shine"></span>
+                    Accedi Mappa
+              
+                  </button>
+              
+                </form>
+                
+                
+              </div>
+          
+          
+           
+            
+            
+      
+           
+      
+      
+
+      
+      
+      
+          
+          <!-- ----------------------DIV LOGIN-------------------- -->
+      
+         
+      
+          <!-- <button (click)="setRegistra()" class="shiny-button">
+            <span class="shine"></span>
+            Registrati2
+          </button>
+      
+          <button (click)="setRegistra2()" class="shiny-button">
+            <span class="shine"></span>
+            Registrati3
+          </button> -->
+      
+      
+          <!-- ----------------------DIV PULSANTI -------------------- -->
+      
+   
+        
+      
+        
+      </div>
+      
+
+
+
+

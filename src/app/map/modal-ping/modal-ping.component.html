@@ -1,0 +1,35 @@
+
+<div class="div-modal-ping">
+  <!-- <p class="nome-utente">nome utente</p>
+<h1>{{descrizione}}</h1>
+<p class="">tipo ping</p>
+<p>id ping : {{idPing}}</p>
+<p>foto ping</p>
+<p>Numero Like :</p> -->
+
+<ion-card>
+  <span  style="display: inline-block;width: 100%;"><img  (click)="zoomImagine()"   [ngClass]="{ 'zoom': zoom }"  alt="Silhouette of mountains" [src]="immagine" /></span>
+  <div class="limiter"></div>
+  <ion-card-header>
+    <ion-card-title>Nome-Utente-Ping</ion-card-title>
+    <ion-card-subtitle>Tipo-Ping</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+   Descrizione Ping
+  </ion-card-content>
+</ion-card>
+
+
+ 
+
+<div class="div-buttoni">
+  <img   src="/assets/like.png" (click)="mettiLike()" >
+
+  <img style="height: 50px;" src="/assets/dislike.png" (click)="mettiDislike()">
+
+</div>
+
+
+</div>
+

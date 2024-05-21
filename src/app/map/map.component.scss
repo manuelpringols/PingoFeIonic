@@ -67,15 +67,20 @@ ion-tab-button{
 
   
 }
+.ion-padding {
 
-ion-content {
- --background:  url("/assets/image.png");
- --background-size:cover;
- --background-position:center
+ --background:rgb(91, 9, 190);
  
  
  border: 1.5px solid black;
  
+}
+
+.ion-modal-ping{
+  --background:rgb(73, 8, 153);
+ 
+ 
+  border: 3.5px solid rgba(255, 247, 23, 0.886);
 }
 
 ion-toolbar{
@@ -87,5 +92,14 @@ ion-toolbar{
     font-style: normal;
 }
 
+.div-bottoni{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+ion-button{
+  
+}
   
   

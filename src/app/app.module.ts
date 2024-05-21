@@ -13,11 +13,15 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { AddPingComponent } from './map/map/componenti-map/add-ping/add-ping.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GooglePlus } from '@ionic-native/google-plus/ngx';
+import { ModalPingComponent } from './map/modal-ping/modal-ping.component';
+import { LoginGoogleComponent } from './login/login/login-google/login-google.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ListaPingComponent } from './map/map-components/lista-ping/lista-ping.component';
 
 
 @NgModule({
-  declarations: [AppComponent,LoginComponent,MapComponent,AddPingComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule,GoogleMapsModule,HttpClientModule,],
+  declarations: [AppComponent,LoginComponent,MapComponent,AddPingComponent,ModalPingComponent,LoginGoogleComponent,ListaPingComponent],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule,GoogleMapsModule,HttpClientModule,ReactiveFormsModule],
   providers: [GooglePlus,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
